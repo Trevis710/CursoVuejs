@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Curso Vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <h2>Estou aprendendo</h2>
+        <button v-on:click="texto('Games')">Games</button>
+        <button v-on:click="texto('Sites')">Sites</button>
+        <button v-on:click="texto('Aplicativos')">Aplicativos</button>
+        <button v-on:click="texto('Planilhas')">Excel</button>
+        <br>
+        {{grade}}
+    </div>
+
+
+    <script> 
+   var app = new Vue({
+            el: '#app',
+            data: {
+                grade: ""
+            },
+            methods: {
+                texto: function(grade) {
+                    this.grade = "Estou aprendendo a programar " + grade;
+                }
+            }
+        }); 
+    </script>
+</body>
+
+</html>
